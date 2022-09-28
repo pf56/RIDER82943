@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net48;net6.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+      <ProjectReference Include="..\ProjectB1\ProjectB.csproj">
+          <SetTargetFramework>TargetFramework=net6.0</SetTargetFramework>
+      </ProjectReference>
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+        <ProjectReference Include="..\ProjectB2\ProjectB.csproj">
+            <SetTargetFramework>TargetFramework=net48</SetTargetFramework>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>
